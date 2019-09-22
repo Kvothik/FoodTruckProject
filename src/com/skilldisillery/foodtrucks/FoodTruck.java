@@ -1,7 +1,8 @@
 package com.skilldisillery.foodtrucks;
 
 public class FoodTruck {
-	private static int truckID;
+	private int truckID = 0;
+	private static int nextTruckID = 1000;
 	private String truckName;
 	private String foodType;
 	private int rating;
@@ -10,14 +11,12 @@ public class FoodTruck {
 		super();
 	}
 
-	public FoodTruck(int truckID, String truckName, String foodType, int rating) {
-		{
-			FoodTruck.truckID = truckID;
-		}
-
+	public FoodTruck(String truckName, String foodType, int rating) {
 		this.truckName = truckName;
 		this.foodType = foodType;
 		this.rating = rating;
+		this.truckID = nextTruckID;
+		nextTruckID++;
 
 	}
 
@@ -26,7 +25,7 @@ public class FoodTruck {
 	}
 
 	public void setTruckID(int truckID) {
-		FoodTruck.truckID = truckID;
+		this.truckID = truckID;
 	}
 
 	public String getTruckName() {

@@ -6,24 +6,23 @@ public class FoodTruckData {
 
 	public void gatherFoodTruckData(FoodTruck[] ft, Scanner kb) {
 
-		for (int truckID = 0; truckID < ft.length; truckID++) {
-
-			System.out.println("Enter the name of truck " + truckID + "(To Exit type Quit):");
-			String truckName = kb.next();
-
-			if (truckName.equalsIgnoreCase("quit")) {
-				break;
+		for (int i = 0; i < ft.length; i++) {
+			System.out.println("Enter the name of truck " + i + "(To Skip type Next):\n");
+			String truckName = kb.nextLine();
 			
+			if (truckName.equalsIgnoreCase("next")) {
+				continue;
 			}
 		
-			System.out.println("Enter type of food at " + truckName + ":");
-			String foodType = kb.next();
+			System.out.println("Enter type of food at " + truckName + ":\n");
+			String foodType = kb.nextLine();
 
 			System.out.println(
 					"How many stars would you rate " + truckName + "?(\u2b50 - \u2b50\u2b50\u2b50\u2b50\u2b50)");
 			int rating = kb.nextInt();
-			FoodTruck newTruckObj = new FoodTruck(truckID, truckName, foodType, rating);
-			ft[truckID] = newTruckObj;
+			kb.nextLine();
+			FoodTruck newTruckObj = new FoodTruck(truckName, foodType, rating);
+			ft[i] = newTruckObj;
 
 		}
 

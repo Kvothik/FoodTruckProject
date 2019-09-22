@@ -19,11 +19,9 @@ public class Menu {
 			case 2:// See average rating of food trucks
 				double avgRating = 0;
 				for (FoodTruck ft : foodTrucks) {
-					avgRating = Math.round((avgRating + ft.getRating()) / foodTrucks.length + 1);// Added +1 to correct
-																									// rounding issues
+					avgRating = (avgRating + ft.getRating()) / foodTrucks.length;
 				}
-				System.out.println("Average rating: " + avgRating);// have not yet added half stars to method
-																	// ratingStars()
+				System.out.println("Average rating: " + avgRating);// have not yet added half stars to method ratingStars()
 				continue;
 			case 3:// Display highest rated food truck
 				int highest = 0;
