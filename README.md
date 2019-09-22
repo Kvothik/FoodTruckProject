@@ -40,6 +40,6 @@ Breaks out of the loop and prints a message "Exiting...".
 FoodTruckData contains one method to gather input and set the data used by the rest of the program.
 FoodTruckData asks the number of FoodTrucks the user wanted to enter and then enters that amount of trucks into the array newTruck[]. After that, there is a for loop to iterate the fields of the array.
 There is a nested if statement which checks if the user types "Quit". If the user types quit, the loop will break before anymore data is entered. The menu method will be called and requested data will be printed there.
-### Technologies/Topics Applied
 
 ### Lessons Learned
+Coding is fun! 
