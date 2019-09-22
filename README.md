@@ -28,13 +28,13 @@ Menu class contains only one method with which to call and generate the menu.
 
 1. public void menu(FoodTruck[] foodTrucks, Scanner kb)
 menu() is a switch statement contained within a while(true), so that the menu will continue to populate until the users selects "Quit". menu() contains options for:
-1.Listing all existing foodTrucks.
+1. Listing all existing foodTrucks.
 Accomplished by using a foreach to iterate through each object in FoodTruck[] and calling toString() to print them.
-2.Display average rating of all entered foodTrucks.
+2. Display average rating of all entered foodTrucks.
 Accomplished by using a foreach, iterating through each object of the array then calculating the average.
-3.Display the highest rated foodTruck.
+3. Display the highest rated foodTruck.
 Accomplished by using a foreach with nested if statement to determine if previous iteration was higher. Returns the foodTruck with the highest rating.
-4.Quit
+4. Quit
 Breaks out of the loop and prints a message "Exiting...".
 #### 4. FoodTruckData
 FoodTruckData contains one method to gather input and set the data used by the rest of the program.
