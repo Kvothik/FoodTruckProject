@@ -3,8 +3,8 @@ package com.skilldisillery.foodtrucks;
 public class FoodTruck {
 	private int truckID = 0;
 	private static int nextTruckID = 1000;
-	private String truckName;
-	private String foodType;
+	private String truckName = "No Data Entered";
+	private String foodType = "No Data Entered";
 	private int rating;
 
 	public FoodTruck() {
@@ -16,7 +16,7 @@ public class FoodTruck {
 		this.foodType = foodType;
 		this.rating = rating;
 		this.truckID = nextTruckID;
-		nextTruckID++;
+		FoodTruck.nextTruckID++;
 
 	}
 

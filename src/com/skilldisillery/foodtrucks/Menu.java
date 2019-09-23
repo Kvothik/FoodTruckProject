@@ -8,27 +8,36 @@ public class Menu {
 			System.out.println("*MENU*\n1.List all existing food trucks." + "\n2.See the average rating of food trucks."
 					+ "\n3.Display the highest-rated food truck." + "\n4.Quit the program.");
 			int menuChoice = kb.nextInt();
+
 			switch (menuChoice) {
 
 			case 1:// List all existing food trucks
 				for (FoodTruck ft : foodTrucks) {
-					ft.toString();
-					System.out.println(ft.toString());
+					if (ft != null) {
+						ft.toString();
+						System.out.println(ft.toString());
+					}
 				}
 				continue;
 			case 2:// See average rating of food trucks
 				double avgRating = 0;
 				for (FoodTruck ft : foodTrucks) {
-					avgRating = (avgRating + ft.getRating()) / foodTrucks.length;
+					if (ft != null) {
+						avgRating = (avgRating + ft.getRating()) / foodTrucks.length;
+					}
+
 				}
-				System.out.println("Average rating: " + avgRating);// have not yet added half stars to method ratingStars()
+				System.out.println("Average rating: " + avgRating);// have not yet added half stars to method
+																	// ratingStars()
 				continue;
 			case 3:// Display highest rated food truck
 				int highest = 0;
 				String highestRated = "";
 				String ratingStarsHighest = "";
 				for (FoodTruck ft : foodTrucks) {
-					if (ft.getRating() > highest) {
+					if (ft != null) {
+						if (ft.getRating() > highest) {
+						}
 						highest = ft.getRating();
 						highestRated = ft.getTruckName();
 						ratingStarsHighest = ft.ratingStars(highest);
@@ -44,6 +53,8 @@ public class Menu {
 				System.out.println("Invalid Selection, Please Try Again.");
 			}
 			break;
+
 		}
+
 	}
 }
