@@ -1,5 +1,6 @@
 package com.skilldisillery.foodtrucks;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Menu {
@@ -23,10 +24,10 @@ public class Menu {
 				double avgRating = 0;
 				for (FoodTruck ft : foodTrucks) {
 					if (ft != null) {
-						avgRating = (avgRating + ft.getRating()) / foodTrucks.length;
+						avgRating = (avgRating + ft.getRating());
 					}
-
 				}
+				avgRating = avgRating / foodTrucks.length;
 				System.out.println("Average rating: " + avgRating);// have not yet added half stars to method
 																	// ratingStars()
 				continue;
