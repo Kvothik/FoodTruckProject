@@ -37,11 +37,12 @@ public class Menu {
 				for (FoodTruck ft : foodTrucks) {
 					if (ft != null) {
 						if (ft.getRating() > highest) {
-						}
+						
 						highest = ft.getRating();
 						highestRated = ft.getTruckName();
 						ratingStarsHighest = ft.ratingStars(highest);
-					}
+						}
+						}
 				}
 				System.out.println(
 						"Highest Rated Food Truck: " + highestRated + "\t\tWith a rating of: " + ratingStarsHighest);
