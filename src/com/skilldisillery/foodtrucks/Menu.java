@@ -33,12 +33,15 @@ public class Menu {
 
 	public void ratingAverage(FoodTruck[] foodTrucks) {
 		double avgRating = 0;
+		double sum = 0;
+		int notNull = 0;
 		for (FoodTruck ft : foodTrucks) {
 			if (ft != null) {
-				avgRating = (avgRating + ft.getRating());
+				notNull++; 
+				sum = sum + ft.getRating();
+				avgRating = sum / notNull;
 			}
 		}
-		avgRating = avgRating / foodTrucks.length;
 		System.out.println("Average rating: " + avgRating);// have not yet added half stars to method
 															// ratingStars()
 	}
