@@ -11,13 +11,8 @@ public class Menu {
 
 			switch (menuChoice) {
 
-			case 1:// List all existing food trucks
-				for (FoodTruck ft : foodTrucks) {
-					if (ft != null) {
-						ft.toString();
-						System.out.println(ft.toString());
-					}
-				}
+			case 1:
+				printFoodTrucks(foodTrucks);
 				continue;
 			case 2:// See average rating of food trucks
 				double avgRating = 0;
@@ -57,5 +52,13 @@ public class Menu {
 
 		}
 
+	}
+	
+	public void printFoodTrucks(FoodTruck[] foodTrucks) {
+		for (FoodTruck ft : foodTrucks) {
+			if (ft != null) {
+				System.out.println(ft.toString());
+			}
+		}
 	}
 }

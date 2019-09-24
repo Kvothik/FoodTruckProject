@@ -3,8 +3,8 @@ package com.skilldisillery.foodtrucks;
 public class FoodTruck {
 	private int truckID = 0;
 	private static int nextTruckID = 1000;
-	private String truckName = "No Data Entered";
-	private String foodType = "No Data Entered";
+	private String truckName;
+	private String foodType;
 	private int rating;
 
 	public FoodTruck() {
