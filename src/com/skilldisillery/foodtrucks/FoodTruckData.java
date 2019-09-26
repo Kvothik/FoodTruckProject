@@ -11,6 +11,12 @@ public class FoodTruckData {
 
 		while (keepGoing) {
 			for (int i = 0; i < ft.length; i++) {
+				for (FoodTruck foodTruck : ft) {
+					if(foodTruck != null) {
+						keepGoing = false;
+						break;
+					}
+				}
 				System.out.println("Enter the name of truck " + i + "(To Exit type quit):\n");
 				String truckName = kb.nextLine();
 				if (truckName.equalsIgnoreCase("quit")) {
